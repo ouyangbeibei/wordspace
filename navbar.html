@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>导航条</title>
+</head>
+<body>
+<style>
+    .navbar{
+        margin:0 auto;
+    }
+    li{
+        list-style:none;
+    }
+    .sye{
+        margin:0;
+        padding:0;
+        background-color: #f1f1f1;
+        width: 50%;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)!important;
+    }
+    .sye li{
+        float:left;
+    }
+    .clearfix::after{
+        content:"";
+        display:block;
+        clear:both;
+    }
+    li:nth-child(3){
+        position:relative;
+    }
+    a{
+        display: block;
+        padding: 8px 16px;
+        text-decoration:none;
+
+        color:black;
+    }
+    .tow{
+        position:absolute;
+        top:34px;
+        left:0;
+    }
+    .tow a{
+        background-color: #f1f1f1;
+        width: 70%;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)!important;
+        opacity:0;
+    }
+    a:hover{
+        background-color:#ccc;
+    }
+    li:nth-child(3):hover .tow a{
+        opacity:1;
+    }
+
+</style>
+<div class="navbar">
+    <ul class="sye clearfix">
+        <li><a href="#">首页</a></li>
+        <li><a href="#">作品</a></li>
+        <li><a href="#">更多</a>
+            <div class="tow">
+                <a href="#">GitHub</a>
+                <a href="#">博客</a>
+                <a href="#">知乎</a>
+            </div>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>
